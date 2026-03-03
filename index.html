@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator">
+    <input type="text" id="display" class="display" value="0" disabled>
+
+    <div class="buttons">
+        <button class="operator" onclick="clearDisplay()">C</button>
+        <button class="operator" onclick="backspace()">⌫</button>
+        <button class="operator" onclick="appendOperator('/')">÷</button>
+        <button class="operator" onclick="appendOperator('*')">×</button>
+
+        <button onclick="appendNumber('7')">7</button>
+        <button onclick="appendNumber('8')">8</button>
+        <button onclick="appendNumber('9')">9</button>
+        <button class="operator" onclick="appendOperator('-')">−</button>
+
+        <button onclick="appendNumber('4')">4</button>
+        <button onclick="appendNumber('5')">5</button>
+        <button onclick="appendNumber('6')">6</button>
+        <button class="operator" onclick="appendOperator('+')">+</button>
+
+        <button onclick="appendNumber('1')">1</button>
+        <button onclick="appendNumber('2')">2</button>
+        <button onclick="appendNumber('3')">3</button>
+        <button class="equal" onclick="calculate()">=</button>
+
+        <button class="zero" onclick="appendNumber('0')">0</button>
+        <button onclick="appendNumber('.')">.</button>
+    </div>
+</div>
+
+<script>
+    let display = document.getElementById("display");
+
+    function appendNumber(number) {
+        if (display.value === "0" && number !== ".") {
+            display.value = number;
+        } else {
+            display.value += number;
+        }
+    }
+
+    function appendOperator(operator) {
+        let lastChar = display.value.slice(-1);
+        if ("+-*/".includes(lastChar)) {
+            display.value = display.value.slice(0, -1) + operator;
+        } else {
+            display.value += operator;
+        }
+    }
+
+    function clearDisplay() {
+        display.value = "0";
+    }
+
+    function backspace() {
+        display.value = display.value.slice(0, -1);
+        if (display.value === "") {
+            display.value = "0";
+        }
+    }
+
+    function calculate() {
+        try {
+            display.value = eval(display.value);
+        } catch {
+            display.value = "Error";
+        }
+    }
+</script>
+
+</body>
+</html>

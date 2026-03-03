@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: #222;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    align-items: center;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 50px;
+    background: #444;
+    color: #fff;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    margin-bottom: 20px;
+}
+
+.hero-image img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    padding: 60px 50px;
+    align-items: center;
+    background: #f4f4f4;
+}
+
+.about-image img {
+    width: 250px;
+    border-radius: 10px;
+}
+
+.about-text {
+    margin-left: 40px;
+}
+
+.about-text h2 {
+    margin-bottom: 15px;
+}
+
+/* Skills */
+.skills {
+    padding: 60px 50px;
+    text-align: center;
+}
+
+.skill-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.skill {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+/* Projects */
+.projects {
+    background: #f4f4f4;
+    padding: 60px 50px;
+    text-align: center;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.project {
+    background: white;
+    padding: 20px;
+    margin: 15px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Resume */
+.resume {
+    padding: 60px 50px;
+    text-align: center;
+}
+
+/* Contact */
+.contact {
+    background: #222;
+    color: white;
+    padding: 40px 50px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
